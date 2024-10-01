@@ -1,0 +1,168 @@
+{
+  "Index": {
+    "meta_title": "תבנית SaaS - התבנית המושלמת לבניית העסק שלך ולהרחבתו בקלות.",
+    "meta_description": "תבנית עמוד נחיתה חינמית וקוד פתוח לעסק ה-SaaS שלך, שנבנתה עם React, TypeScript, Shadcn UI, ו-Tailwind CSS."
+  },
+  "Navbar": {
+    "sign_in": "התחבר",
+    "sign_up": "הרשם",
+    "product": "מוצר",
+    "docs": "מסמכים",
+    "blog": "בלוג",
+    "community": "קהילה",
+    "company": "חברה",
+    "solutions": "פתרונות",
+    "individuals": "יחידים",
+    "resources": "משאבים",
+    "about": "אודות"
+  },
+  "Hero": {
+    "follow_twitter": "עקוב אחרי @Ixartz בטוויטר",
+    "title": "התבנית המושלמת <important>SaaS</important> לבניית והרחבת העסק שלך בקלות.",
+    "description": "תבנית עמוד נחיתה חינמית וקוד פתוח לעסק ה-SaaS שלך, שנבנתה עם React, TypeScript, Shadcn UI, ו-Tailwind CSS.",
+    "primary_button": "התחל עכשיו",
+    "secondary_button": "כוכב על GitHub"
+  },
+  "Sponsors": {
+    "title": "בחסות"
+  },
+  "Features": {
+    "section_subtitle": "מאפיינים",
+    "section_title": "שחרר את הפוטנציאל המלא של תבנית ה-SaaS",
+    "section_description": "תבנית עמוד נחיתה חינמית וקוד פתוח לעסק ה-SaaS שלך, שנבנתה עם React, TypeScript, Shadcn UI, ו-Tailwind CSS.",
+    "feature1_title": "Node.js",
+    "feature2_title": "React",
+    "feature3_title": "Tailwind CSS",
+    "feature4_title": "TypeScript",
+    "feature5_title": "Shadcn UI",
+    "feature6_title": "ESLint",
+    "feature_description": "תבנית עמוד נחיתה חינמית וקוד פתוח לעסק ה-SaaS שלך, שנבנתה עם React, TypeScript, Shadcn UI, ו-Tailwind CSS."
+  },
+  "Pricing": {
+    "section_subtitle": "מאפיינים",
+    "section_title": "שחרר את הפוטנציאל המלא של תבנית ה-SaaS",
+    "section_description": "תבנית עמוד נחיתה חינמית וקוד פתוח לעסק ה-SaaS שלך, שנבנתה עם React, TypeScript, Shadcn UI, ו-Tailwind CSS.",
+    "button_text": "התחל עכשיו"
+  },
+  "PricingPlan": {
+    "free_plan_name": "חינם",
+    "premium_plan_name": "פרימיום",
+    "enterprise_plan_name": "ארגוני",
+    "free_plan_description": "ליחידים",
+    "premium_plan_description": "לצוותים קטנים",
+    "enterprise_plan_description": "למנהיגי תעשייה",
+    "feature_team_member": "{number} חברי צוות",
+    "feature_website": "{number} אתרים",
+    "feature_storage": "{number} GB אחסון",
+    "feature_transfer": "{number} TB העברה",
+    "feature_email_support": "תמיכת אימייל",
+    "plan_interval_month": "חודש",
+    "plan_interval_year": "שנה",
+    "next_renew_date": "המנוי שלך יחודש בתאריך {date}"
+  },
+  "FAQ": {
+    "question": "האם Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquam enim dui, id consequat turpis ullamcorper ac. Mauris id quam dolor. Nullam eu egestas turpis. Proin risus elit, sollicitudin in mi a, accumsan euismod turpis. In euismod mi sed diam tristique hendrerit."
+  },
+  "CTA": {
+    "title": "אתם מוכנים?",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "button_text": "כוכב על GitHub"
+  },
+  "Footer": {
+    "product": "מוצר",
+    "docs": "מסמכים",
+    "blog": "בלוג",
+    "community": "קהילה",
+    "company": "חברה",
+    "terms_of_service": "תנאי שירות",
+    "privacy_policy": "מדיניות פרטיות",
+    "designed_by": "מעוצב על ידי <author></author>"
+  },
+  "ProtectFallback": {
+    "not_enough_permission": "אין לך הרשאות לבצע פעולה זו"
+  },
+  "SignIn": {
+    "meta_title": "התחברות",
+    "meta_description": "התחבר לחשבונך בקלות באמצעות תהליך הכניסה הידידותי למשתמש שלנו."
+  },
+  "SignUp": {
+    "meta_title": "הרשמה",
+    "meta_description": "צור חשבון בקלות באמצעות תהליך ההרשמה האינטואיטיבי שלנו."
+  },
+  "DashboardLayout": {
+    "home": "דף הבית",
+    "todos": "משימות",
+    "members": "חברים",
+    "billing": "תשלום",
+    "settings": "הגדרות"
+  },
+  "Dashboard": {
+    "meta_title": "לוח מחוונים של תבנית SaaS",
+    "meta_description": "תבנית עמוד נחיתה חינמית וקוד פתוח לעסק ה-SaaS שלך, שנבנתה עם Next.js, TypeScript, Shadcn UI, ו-Tailwind CSS."
+  },
+  "DashboardIndex": {
+    "title_bar": "לוח מחוונים",
+    "title_bar_description": "ברוכים הבאים ללוח המחוונים שלך",
+    "message_state_title": "בואו נתחיל",
+    "message_state_description": "ניתן להתאים אישית את הדף הזה על ידי עריכת הקובץ <code>dashboard/page.tsx</code>",
+    "message_state_button": "צריך אינטגרציה של Stripe? עיין ב-Next.js Boilerplate Pro"
+  },
+  "UserProfile": {
+    "title_bar": "פרופיל משתמש",
+    "title_bar_description": "צפה ונהל את פרופיל המשתמש שלך"
+  },
+  "OrganizationProfile": {
+    "title_bar": "ניהול ארגון",
+    "title_bar_description": "נהל את הארגון שלך"
+  },
+  "Billing": {
+    "title_bar": "תשלום",
+    "title_bar_description": "נהל את התשלום והמנוי שלך",
+    "current_section_title": "תוכנית נוכחית",
+    "current_section_description": "התאם את תוכנית התשלום שלך כדי להתאים לדרישות שלך",
+    "manage_subscription_button": "נהל מנוי"
+  },
+  "BillingOptions": {
+    "current_plan": "תוכנית נוכחית",
+    "upgrade_plan": "התחל עכשיו"
+  },
+  "CheckoutConfirmation": {
+    "title_bar": "אישור תשלום",
+    "message_state_title": "התשלום עבר בהצלחה",
+    "message_state_description": "התשלום שלך בוצע בהצלחה. תודה על הרכישה!",
+    "message_state_button": "חזור לדף התשלום"
+  },
+  "DataTable": {
+    "no_results": "אין תוצאות."
+  },
+  "Todos": {
+    "title_bar": "רשימת משימות",
+    "title_bar_description": "צפה ונהל את רשימת המשימות שלך",
+    "add_todo_button": "משימה חדשה"
+  },
+  "TodoTableColumns": {
+    "open_menu": "פתח תפריט",
+    "edit": "ערוך",
+    "delete": "מחק",
+    "title_header": "כותרת",
+    "message_header": "הודעה"
+  },
+  "AddTodo": {
+    "title_bar": "הוסף משימה",
+    "add_todo_section_title": "צור משימה חדשה",
+    "add_todo_section_description": "מלא את הטופס למטה כדי ליצור משימה חדשה"
+  },
+  "EditTodo": {
+    "title_bar": "ערוך משימה",
+    "edit_todo_section_title": "שנה משימה",
+    "edit_todo_section_description": "מלא את הטופס למטה כדי לערוך את המשימה"
+  },
+  "TodoForm": {
+    "title_label": "כותרת",
+    "title_description": "הכנס כותרת תיאורית למשימה שלך.",
+    "message_title": "הודעה",
+    "message_description": "הכנס הודעה מפורטת למשימה שלך.",
+    "submit_button": "שלח"
+  }
+}
