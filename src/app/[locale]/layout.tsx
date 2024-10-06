@@ -44,7 +44,6 @@ export default function RootLayout(props: {
 }) {
   unstable_setRequestLocale(props.params.locale);
 
-  // Using internationalization in Client Components
   const messages = useMessages();
 
   return (
@@ -57,6 +56,7 @@ export default function RootLayout(props: {
           <Navbar />
           {props.children}
           <Footer />
+          <DemoBadge />
 
           <DemoBadge />
         </NextIntlClientProvider>

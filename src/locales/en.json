@@ -164,5 +164,11 @@
     "message_title": "Message",
     "message_description": "Enter a detailed message for your todo.",
     "submit_button": "Submit"
+  },
+  "HomePoster": {
+    "title": "Tagline - Main value proposition",
+    "description": "Explanation about the company / product i.e. we connect security companies with individuals and enable on-demand security services",
+    "button1Text": "For security companies >",
+    "button2Text": "For individuals >"
   }
 }
