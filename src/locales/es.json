@@ -164,5 +164,11 @@
     "message_title": "Mensaje",
     "message_description": "Introduce un mensaje detallado para tu tarea.",
     "submit_button": "Enviar"
+  },
+  "HomePoster": {
+    "title": "Eslogan - Propuesta de valor principal",
+    "description": "Explicación sobre la empresa / producto, por ejemplo: conectamos empresas de seguridad con individuos y facilitamos servicios de seguridad bajo demanda",
+    "button1Text": "Para empresas de seguridad >",
+    "button2Text": "Para individuos >"
   }
 }
