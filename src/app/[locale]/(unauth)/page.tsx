@@ -1,39 +1,52 @@
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { useTranslations } from 'next-intl';
+import React from 'react';
+import Poster from '@/components/Poster';
+import ContactForm from '@/components/RequestDemoAndWorkForm';
+import SecurityApp from '@/components/SmartphoneComponent';
+import pic from '../../../../public/assets/images/poster-images/iStock-1338846217 3.png';
+import Testimonials from '@/components/testimonials';
+import SecurityServices from '@/components/Pic-description';
+import ImpactComponent from '@/components/Difference';
 
-import { CTA } from "@/templates/CTA";
-import { FAQ } from "@/templates/FAQ";
-import { Features } from "@/templates/Features";
-// import { Footer } from "@/templates/Footer";
-import { Hero } from "@/templates/Hero";
-// import { Navbar } from "@/components/layout-components/Navbar";
-import { Pricing } from "@/templates/Pricing";
-import { Sponsors } from "@/templates/Sponsors";
-
-export async function generateMetadata(props: { params: { locale: string } }) {
-  const t = await getTranslations({
-    locale: props.params.locale,
-    namespace: "Index",
-  });
-
-  return {
-    title: t("meta_title"),
-    description: t("meta_description"),
-  };
-}
-
-export default function IndexPage(props: { params: { locale: string } }) {
-  unstable_setRequestLocale(props.params.locale);
+function Page() {
+  const t = useTranslations();
+  const valueProps = [
+    {
+      title: "Voice activation",
+      description: "Activate emergency services hands-free with our voice recognition technology. Simply say your safe phrase to trigger an immediate response."
+    },
+    {
+      title: "Real-time location tracking",
+      description: "Our app provides continuous location updates to emergency contacts and responders, ensuring help arrives exactly where it's needed."
+    },
+    {
+      title: "Instant alerts",
+      description: "Send immediate notifications to your pre-selected emergency contacts with just one tap, keeping your loved ones informed in critical situations."
+    }
+  ]
+  
 
   return (
-    <>
-      {/* <Navbar /> */}
-      <Hero />
-      <Sponsors />
-      <Features />
-      <Pricing />
-      <FAQ />
-      <CTA />
-      {/* <Footer /> */}
-    </>
+    <div className='flex flex-col items-center'>
+      <Poster
+        isDark
+        backgroundImage={pic.src}
+        title={t('HomePoster.title')}
+        description={t('HomePoster.description')}
+        button1Text={t('HomePoster.button1Text')}
+        button1Link="/home"
+        button2Text={t('HomePoster.button2Text')}
+        button2Link="/home"
+
+      />
+      <SecurityServices headline='SECURITY COMPANIES' title='Offer on-demand security services' valueProps={valueProps} isReversed={false} imageSrcs={["aaaa", "bbbb"]} buttonText1='Get Started Now' buttonText2='Book Demo'/>
+      <SecurityApp direction={true} primaryButtonText="Check how to connect" valueProps={valueProps}/>
+      <Testimonials />
+      <ImpactComponent />
+      <ContactForm isRequestingADemo={true} />
+      
+    </div>
   );
 }
+
+export default Page;
