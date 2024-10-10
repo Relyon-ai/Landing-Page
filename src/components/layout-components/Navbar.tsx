@@ -14,8 +14,8 @@ const Navbar = () => {
   const t = useTranslations('Navbar');
 
   const solutionsLinks: NavLink[] = [
-    { label: 'Security Companies', href: '/' },
-    { label: 'Rescue and Evacuation', href: '/' },
+    { label: 'Security Companies', href: '/solutions/security-companies' },
+    { label: 'Rescue and Evacuation', href: '/solutions/evacuation' },
   ];
 
   const resourcesLinks: NavLink[] = [
@@ -25,8 +25,8 @@ const Navbar = () => {
     { label: 'Help Center / FAQs', href: '/' },
   ];
   const aboutLinks: NavLink[] = [
-    { label: 'Company', href: '/' },
-    { label: 'Impact', href: '/' },
+    { label: 'Company', href: '/about/company' },
+    { label: 'Impact', href: '/about/impact' },
   ];
 
   return (
@@ -37,7 +37,7 @@ const Navbar = () => {
         </li>
 
         <li className="flex items-center justify-center">
-          <Link className="inline-flex items-center px-1 pt-1" href="/">
+          <Link className="inline-flex items-center px-1 pt-1" href="/individuals">
             {t('individuals')}
           </Link>
         </li>

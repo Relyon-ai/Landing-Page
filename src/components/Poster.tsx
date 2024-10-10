@@ -28,13 +28,12 @@ export default function Poster({
   button2Link,
 }: PosterProps) {
   return (
-    <div className="relative mb-40 size-full overflow-hidden">
+    <div className="relative h-screen w-full">
       <Image
         src={backgroundImage}
         alt="Background"
         layout="fill"
-        objectFit="cover"
-        className="z-0"
+        className="z-0 h-[100%]"
       />
       <div
         className={`absolute inset-0 bg-gradient-to-r ${isDark ? 'from-black' : 'from-white'} z-10 to-transparent`}
