@@ -1,54 +1,6 @@
-// import React, { ReactNode } from 'react';
-// import { Card, CardContent } from "@/components/ui/card";
-
-// interface Benefit {
-//   title: string;
-//   description: string;
-// }
-
-// interface BenefitsProps {
-//   title: string;
-//   icons: ReactNode[]; 
-//   benefits: Benefit[];
-// }
-
-// export default function Benefits({ title, icons, benefits }: BenefitsProps) {
-//   return (
-//     <div className="w-full max-w-4xl mx-auto px-[5%] py-[2%]">
-//       <h2 className="text-3xl font-bold text-center mb-[2%]">{title}</h2>
-//       <div className="grid gap-[2%]">
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2%]">
-//           {benefits.slice(0, 3).map((benefit, index) => (
-//             <Card key={index} className="w-full overflow-hidden">
-//               <CardContent className="h-full flex flex-col justify-center items-center text-center p-[4%]">
-//                 <div className="w-[30%] h-[30%] mb-[5%] flex items-center justify-center">
-//                   {icons[index]}
-//                 </div>
-//                 <h3 className="text-xl font-semibold mb-[3%]">{benefit.title}</h3>
-//                 <p className="text-gray-600">{benefit.description}</p>
-//               </CardContent>
-//             </Card>
-//           ))}
-//         </div>
-//         <div className="flex justify-center gap-[2%] mt-[2%]">
-//           {benefits.slice(3).map((benefit, index) => (
-//             <Card key={index + 3} className="w-full aspect-square md:w-[30%] overflow-hidden">
-//               <CardContent className="h-full flex flex-col justify-center items-center text-center p-[4%]">
-//                 <div className="w-[30%] h-[30%] mb-[5%] flex items-center justify-center">
-//                   {icons[index + 3]}
-//                 </div>
-//                 <h3 className="text-xl font-semibold mb-[3%]">{benefit.title}</h3>
-//                 <p className="text-gray-600">{benefit.description}</p>
-//               </CardContent>
-//             </Card>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
 import React from 'react';
+import {Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+
 type Benefit = {
   title: string;
   description: string;
@@ -60,25 +12,64 @@ type BenefitsDisplayProps = {
   benefits: Benefit[];
 };
 
-const BenefitCard = ({ icon, title, description }: Benefit) => (
-  <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center aspect-square">
-    <div className="w-12 h-12 flex items-center justify-center text-blue-600 mb-4">
-      {icon}
-    </div>
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
-    <p className="text-sm text-gray-600">{description}</p>
-  </div>
-);
-
-export default function BenefitsDisplay({ title, benefits }: BenefitsDisplayProps) {
+function BenefitsDisplay({ title, benefits }: BenefitsDisplayProps) {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-12 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-12">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {benefits.map((benefit, index) => (
-          <BenefitCard key={index} {...benefit} />
+    <div className="w-full max-w-5xl mx-auto px-4 py-8 bg-[#F2F5F6]">
+      <h2 className="text-3xl font-bold text-center mb-8">{title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {benefits.slice(0, 3).map((benefit, index) => (
+          <div key={index} className="bg-white shadow-none">
+            <CardHeader className="flex flex-col items-center">
+              <div className="w-16 h-16 flex items-center justify-center text-teal-600 mb-4">
+                {benefit.icon}
+              </div>
+              <CardTitle className="text-xl font-semibold text-center">{benefit.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-center text-gray-600">{benefit.description}</p>
+            </CardContent>
+          </div>
+        ))}
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 md:w-2/3 mx-auto">
+        {benefits.slice(3).map((benefit, index) => (
+          <div key={index} className="bg-white shadow-none">
+            <CardHeader className="flex flex-col items-center">
+              <div className="w-16 h-16 flex items-center justify-center text-teal-600 mb-4">
+                {benefit.icon}
+              </div>
+              <CardTitle className="text-xl font-semibold text-center">{benefit.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-center text-gray-600">{benefit.description}</p>
+            </CardContent>
+          </div>
         ))}
       </div>
     </div>
-  );
+  )
 }
+function RoundedBenefitsDisplay({ title, benefits }: BenefitsDisplayProps) {
+  return (
+    <div className="w-full max-w-4xl mx-auto p-6">
+      <h2 className="text-2xl font-bold text-center mb-6">{title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {benefits.map((benefit, index) => (
+          <Card key={index} className="border border-gray-200 rounded-lg shadow-sm">
+            <CardHeader className="flex flex-col items-center space-y-2 p-4">
+              <div className="w-16 h-16 flex items-center justify-center text-teal-600">
+                {benefit.icon}
+              </div>
+              <CardTitle className="text-lg font-semibold text-center">{benefit.title}</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center text-sm text-gray-600 px-4 pb-4">
+              <p>{benefit.description}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export  {BenefitsDisplay, RoundedBenefitsDisplay}
