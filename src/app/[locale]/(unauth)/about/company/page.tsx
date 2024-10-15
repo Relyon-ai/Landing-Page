@@ -1,8 +1,9 @@
+import FoundingTeam from '@/components/Founding-Team'
 import React from 'react'
 
 function Page() {
   return (
-    <div>company</div>
+    <FoundingTeam  />
   )
 }
 
