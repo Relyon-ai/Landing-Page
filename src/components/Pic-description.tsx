@@ -10,13 +10,15 @@ interface ValueProp {
 }
 
 interface SecurityServicesProps {
-  headline: string
+  headline?: string
   title: string
-  valueProps: ValueProp[]
+  valueProps?: ValueProp[]
   buttonText1?: string
   buttonText2?: string
   imageSrcs?: string[]
   isReversed?: boolean
+  textSizeColor?: string[]
+  clickHere?: boolean
 }
 
 export default function SecurityServices({
@@ -27,6 +29,8 @@ export default function SecurityServices({
   buttonText2,
   imageSrcs = [],
   isReversed = false,
+  textSizeColor =['sm', 'muted-foreground'],
+  clickHere = false,
 }: SecurityServicesProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -35,10 +39,10 @@ export default function SecurityServices({
       <h2 className="text-sm font-semibold uppercase mb-2">{headline}</h2>
       <h1 className="text-3xl font-bold mb-6">{title}</h1>
       <div className="space-y-4 mb-8">
-        {valueProps.map((prop, index) => (
+        {valueProps?.map((prop, index) => (
           <div key={index}>
-            <h3 className="font-semibold">Value #{index + 1}</h3>
-            <p className="text-sm text-muted-foreground">{prop.description}</p>
+            <h3 className="font-semibold">{prop.title}</h3>
+            <p className={`text-${textSizeColor[0]} text-${textSizeColor[1]}`}>{prop.description} {index === valueProps.length - 1 && clickHere ? <button className='text-teal-500 underline'> click here </button> : null} </p>
           </div>
         ))}
       </div>

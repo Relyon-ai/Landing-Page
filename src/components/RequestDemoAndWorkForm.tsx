@@ -15,19 +15,21 @@ interface ContactFormProps {
   isRequestingADemo: boolean;
   title?: string;
   description?: string;
+  formColor?: string
 }
 
 export default function ContactForm({
   isRequestingADemo,
   title,
   description,
+  formColor= 'gray-100'
 }: ContactFormProps) {
   const formTitle = isRequestingADemo ? 'Request a demo' : 'Work with us';
   const buttonText = isRequestingADemo ? 'Request a demo' : 'Submit';
 
   return (
-    <div className="h-screen flex flex-col w-[90%] justify-center items-center md:flex-row">
-      <div className="flex-1 py-14">
+    <div className="h-screen flex flex-col w-[74%] justify-center items-center md:flex-row">
+      <div className="flex-1 py-14 mx-6">
         <h2 className="mb-4 text-3xl font-bold">{title || formTitle}</h2>
         <p className="text-gray-600">
           {description ||
@@ -35,7 +37,7 @@ export default function ContactForm({
         </p>
       </div>
       <div className="flex-1">
-        <form className="rounded-lg bg-gray-100 p-6">
+        <form className={`rounded-lg bg-${formColor} p-6`}>
           <div className="mb-4 grid grid-cols-2 gap-4">
             <Input placeholder="First name *" required className="bg-white " />
             <Input placeholder="Last name" className="bg-white" />
