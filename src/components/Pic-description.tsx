@@ -19,6 +19,7 @@ interface SecurityServicesProps {
   isReversed?: boolean
   textSizeColor?: string[]
   clickHere?: boolean
+  isGray? : boolean
 }
 
 export default function SecurityServices({
@@ -31,6 +32,7 @@ export default function SecurityServices({
   isReversed = false,
   textSizeColor =['sm', 'muted-foreground'],
   clickHere = false,
+  isGray = false
 }: SecurityServicesProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -88,7 +90,7 @@ export default function SecurityServices({
   )
 
   return (
-    <div className={`flex flex-col md:flex-row items-center w-[90%] min-h-screen bg-background text-foreground ${isReversed ? 'md:flex-row-reverse' : ''}`}>
+    <div className={`flex flex-col md:flex-row items-center w-[90%] min-h-screen ${isGray ? 'bg-[#f2f5f6]' :'bg-background' } text-foreground ${isReversed ? 'md:flex-row-reverse' : ''}`}>
       <ContentSection />
       <ImageSection />
     </div>
