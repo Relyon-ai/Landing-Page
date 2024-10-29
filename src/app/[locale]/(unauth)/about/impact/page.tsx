@@ -1,6 +1,10 @@
 import SecurityServices from '@/components/Pic-description'
+import Poster from '@/components/Poster'
 import ContactForm from '@/components/RequestDemoAndWorkForm'
 import React from 'react'
+import pic from '../../../../../../public/assets/images/poster-images/99548d550277146275f315069366b104.jpeg'
+import Testimonials from '@/components/testimonials'
+import InThePress from '@/components/In-The-Press'
 
 function Page() {
   
@@ -22,8 +26,11 @@ function Page() {
   
   return (
     <div className='flex flex-col items-center'>
+      <Poster backgroundImage={pic.src} isDark={true} title='Making a difference with Relyon' description='At Relyon, we are committed to creating a safer world through innovation and technology. Our solutions not only enhance personal safety but also contribute to social impact by addressing critical issues faced by individuals and communities.' button1Link={"/"} button1Text='Join us in making a difference'/>
       <SecurityServices title='Our Story' valueProps={valueProps} isReversed={false} imageSrcs={["aaaa"]} textSizeColor={['2xl','black' ]} clickHere={true}/>
       <div className='bg-[#F2F5F6] flex flex-col items-center'>
+        <Testimonials buttons={false} title='How Relyon keeps them safe' headline='FROM OUR USERS' />
+        <InThePress title='OUR PARTNERS' bgColor='white' />
         <ContactForm isRequestingADemo={false} formColor='white'/>
       </div>
     </div>

@@ -3,17 +3,19 @@ import Image from 'next/image'
 
 interface PressSectionProps {
   imageUrls?: string[]
+  bgColor?: string
+  title? : string
 }
 
-export default function InThePress({ imageUrls }: PressSectionProps = {}) {
+export default function InThePress({ imageUrls, bgColor, title }: PressSectionProps = {}) {
   const logoCount = 4
 
   return (
-    <section className="w-full bg-gray-100 flex justify-center h-[60vh]" >
+    <section className={`w-full ${bgColor ? `bg-${bgColor}` : 'bg-gray-100'}  flex justify-center h-[60vh]`} >
       <div className="container flex justify-center items-center" style={{ width: '90%', height: '90%' }}>
         <div>
 
-        <h2 className="text-3xl font-bold text-center" style={{ marginBottom: '5%' }}>In the press</h2>
+        <h2 className="text-3xl font-bold text-center" style={{ marginBottom: '5%' }}>{title ? title : "In the press"}</h2>
         <div className="md:grid-cols-4 gap-6 flex items-center justify-center">
           {imageUrls && imageUrls.length > 0
             ? imageUrls.map((url, index) => (

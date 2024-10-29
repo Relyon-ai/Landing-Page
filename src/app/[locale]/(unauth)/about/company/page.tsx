@@ -47,7 +47,7 @@ function Page() {
 
     <div className='flex justify-center items-center '>
       <ContactForm isRequestingADemo={false} />
-</div>
+    </div>
     </>
   )
 }
