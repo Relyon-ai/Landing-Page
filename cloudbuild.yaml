@@ -30,4 +30,7 @@ steps:
       - "--allow-unauthenticated"
     id: "Deploying the app to cloud run"
 
+options:
+  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
+
 timeout: 6100s
