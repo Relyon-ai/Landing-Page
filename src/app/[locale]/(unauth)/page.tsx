@@ -14,19 +14,16 @@ function Page() {
   const t = useTranslations();
   const valueProps = [
     {
-      title: 'Voice activation',
-      description:
-        'Activate emergency services hands-free with our voice recognition technology. Simply say your safe phrase to trigger an immediate response.',
+      title: t('VoiceActivation.title'),
+      description: t('VoiceActivation.description'),
     },
     {
-      title: 'Real-time location tracking',
-      description:
-        "Our app provides continuous location updates to emergency contacts and responders, ensuring help arrives exactly where it's needed.",
+      title: t('RealTimeTracking.title'),
+      description: t('RealTimeTracking.description'),
     },
     {
-      title: 'Instant alerts',
-      description:
-        'Send immediate notifications to your pre-selected emergency contacts with just one tap, keeping your loved ones informed in critical situations.',
+      title: t('InstantAlerts.title'),
+      description: t('InstantAlerts.description'),
     },
   ];
 
@@ -43,17 +40,17 @@ function Page() {
         button2Link="/home"
       />
       <SecurityServices
-        headline="SECURITY COMPANIES"
-        title="Offer on-demand security services"
+        headline={t('SecurityServices.headline')}
+        title={t('SecurityServices.title')}
         valueProps={valueProps}
         isReversed={false}
         imageSrcs={['aaaa', 'bbbb']}
-        buttonText1="Get Started Now"
-        buttonText2="Book Demo"
+        buttonText1={t('SecurityServices.buttonText1')}
+        buttonText2={t('SecurityServices.buttonText2')}
       />
       <SecurityApp
         direction
-        primaryButtonText="Check how to connect"
+        primaryButtonText={t('SecurityApp.primaryButtonText')}
         valueProps={valueProps}
       />
       <Testimonials />
@@ -61,6 +58,18 @@ function Page() {
       <ContactForm isRequestingADemo />
     </div>
   );
+}
+
+// Example of getStaticProps for Next.js
+export async function getStaticProps({ locale }: { locale: string }) {
+  // Load messages based on the locale
+  const messages = await import(`../../../../messages/${locale}.json`);
+
+  return {
+    props: {
+      messages,
+    },
+  };
 }
 
 export default Page;
