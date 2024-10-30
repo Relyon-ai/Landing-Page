@@ -1,4 +1,14 @@
 steps:
+  # Install dependencies
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["install"]
+    id: "Installing dependencies"
+
+  # Build the Next.js app
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["run", "build"]
+    id: "Building the Next.js app"
+
   # Build the container image
   - name: "gcr.io/cloud-builders/docker"
     args:
@@ -28,7 +38,7 @@ steps:
       - "--platform"
       - "managed"
       - "--allow-unauthenticated"
-    id: "Deploying the app to cloud run"
+    id: "Deploying the app to Cloud Run"
 
 options:
   default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
