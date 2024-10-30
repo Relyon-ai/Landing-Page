@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import { LogoCloud } from '@/features/landing/LogoCloud';
-import { Section } from '@/features/landing/Section';
+import { LogoCloud } from "@/features/landing/LogoCloud";
+import { Section } from "@/features/landing/Section";
 
 const Sponsors = () => (
   <Section>

@@ -33,7 +33,7 @@ export default function Poster({
         src={backgroundImage}
         alt="Background"
         layout="fill"
-        className="z-0 h-[100%]"
+        className="z-0 h-full"
       />
       <div
         className={`absolute inset-0 bg-gradient-to-r ${isDark ? 'from-black' : 'from-white'} z-10 to-transparent`}

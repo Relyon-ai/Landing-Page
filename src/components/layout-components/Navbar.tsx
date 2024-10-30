@@ -37,7 +37,10 @@ const Navbar = () => {
         </li>
 
         <li className="flex items-center justify-center">
-          <Link className="inline-flex items-center px-1 pt-1" href="/individuals">
+          <Link
+            className="inline-flex items-center px-1 pt-1"
+            href="/individuals"
+          >
             {t('individuals')}
           </Link>
         </li>

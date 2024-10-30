@@ -1,18 +1,18 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
-import { Background } from '@/components/Background';
-import { FeatureCard } from '@/features/landing/FeatureCard';
-import { Section } from '@/features/landing/Section';
+import { Background } from "@/components/Background";
+import { FeatureCard } from "@/features/landing/FeatureCard";
+import { Section } from "@/features/landing/Section";
 
 const Features = () => {
-  const t = useTranslations('Features');
+  const t = useTranslations("Features");
 
   return (
     <Background>
       <Section
-        subtitle={t('section_subtitle')}
-        title={t('section_title')}
-        description={t('section_description')}
+        subtitle={t("section_subtitle")}
+        title={t("section_title")}
+        description={t("section_description")}
       >
         <div className="grid grid-cols-1 gap-x-3 gap-y-8 md:grid-cols-3">
           <FeatureCard
@@ -29,9 +29,9 @@ const Features = () => {
                 <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
               </svg>
             }
-            title={t('feature1_title')}
+            title={t("feature1_title")}
           >
-            {t('feature_description')}
+            {t("feature_description")}
           </FeatureCard>
 
           <FeatureCard
@@ -48,9 +48,9 @@ const Features = () => {
                 <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
               </svg>
             }
-            title={t('feature2_title')}
+            title={t("feature2_title")}
           >
-            {t('feature_description')}
+            {t("feature_description")}
           </FeatureCard>
 
           <FeatureCard
@@ -67,9 +67,9 @@ const Features = () => {
                 <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
               </svg>
             }
-            title={t('feature3_title')}
+            title={t("feature3_title")}
           >
-            {t('feature_description')}
+            {t("feature_description")}
           </FeatureCard>
 
           <FeatureCard
@@ -86,9 +86,9 @@ const Features = () => {
                 <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
               </svg>
             }
-            title={t('feature4_title')}
+            title={t("feature4_title")}
           >
-            {t('feature_description')}
+            {t("feature_description")}
           </FeatureCard>
 
           <FeatureCard
@@ -105,9 +105,9 @@ const Features = () => {
                 <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
               </svg>
             }
-            title={t('feature5_title')}
+            title={t("feature5_title")}
           >
-            {t('feature_description')}
+            {t("feature_description")}
           </FeatureCard>
 
           <FeatureCard
@@ -124,9 +124,9 @@ const Features = () => {
                 <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3M12 12l8-4.5M12 12v9M12 12L4 7.5" />
               </svg>
             }
-            title={t('feature6_title')}
+            title={t("feature6_title")}
           >
-            {t('feature_description')}
+            {t("feature_description")}
           </FeatureCard>
         </div>
       </Section>

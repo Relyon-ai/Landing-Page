@@ -26,14 +26,14 @@ export default function SecurityApp({
   primaryButtonText,
   secondaryButtonText,
   onPrimaryClick,
-  onSecondaryClick
+  onSecondaryClick,
 }: SecurityAppProps) {
   const imageContent = (
     <div className="relative w-full md:h-[500px]">
-      <div className="absolute inset-0 flex justify-center items-center">
+      <div className="absolute inset-0 flex items-center justify-center">
         {direction ? (
           <>
-            <div className="relative w-[180px] h-[360px] md:w-[225px] md:h-[450px] z-0 -mr-16 mt-8">
+            <div className="relative z-0 -mr-16 mt-8 h-[360px] w-[180px] md:h-[450px] md:w-[225px]">
               <Image
                 src={direction ? pic2.src : pic1.src}
                 alt="Security App Map View"
@@ -41,7 +41,7 @@ export default function SecurityApp({
                 objectFit="contain"
               />
             </div>
-            <div className="relative w-[220px] h-[440px] md:w-[275px] md:h-[550px] z-10">
+            <div className="relative z-10 h-[440px] w-[220px] md:h-[550px] md:w-[275px]">
               <Image
                 src={direction ? pic1.src : pic2.src}
                 alt="Security App Interface"
@@ -52,7 +52,7 @@ export default function SecurityApp({
           </>
         ) : (
           <>
-            <div className="relative w-[220px] h-[440px] md:w-[275px] md:h-[550px] z-10">
+            <div className="relative z-10 h-[440px] w-[220px] md:h-[550px] md:w-[275px]">
               <Image
                 src={pic1.src}
                 alt="Security App Map View"
@@ -60,7 +60,7 @@ export default function SecurityApp({
                 objectFit="contain"
               />
             </div>
-            <div className="relative w-[180px] h-[360px] md:w-[225px] md:h-[450px] z-0 -ml-16 mt-8">
+            <div className="relative z-0 -ml-16 mt-8 h-[360px] w-[180px] md:h-[450px] md:w-[225px]">
               <Image
                 src={pic2.src}
                 alt="Security App Interface"
@@ -72,14 +72,16 @@ export default function SecurityApp({
         )}
       </div>
     </div>
-  )
+  );
 
   const textContent = direction ? (
     <div className="flex flex-col justify-center">
-      <h2 className="text-sm font-semibold text-gray-500 mb-2">INDIVIDUALS & FAMILIES</h2>
-      <h1 className="text-4xl font-bold mb-6">Stay safe. Stay connected.</h1>
+      <h2 className="mb-2 text-sm font-semibold text-gray-500">
+        INDIVIDUALS & FAMILIES
+      </h2>
+      <h1 className="mb-6 text-4xl font-bold">Stay safe. Stay connected.</h1>
       {valueProps && (
-        <div className="space-y-4 mb-6">
+        <div className="mb-6 space-y-4">
           {valueProps.map((prop, index) => (
             <div key={index}>
               <h3 className="font-semibold">{prop.title}</h3>
@@ -88,19 +90,21 @@ export default function SecurityApp({
           ))}
         </div>
       )}
-      <div >
-      <Button variant={"cta"} onClick={onPrimaryClick} >
-        {primaryButtonText}
-      </Button>
+      <div>
+        <Button variant="cta" onClick={onPrimaryClick}>
+          {primaryButtonText}
+        </Button>
       </div>
     </div>
   ) : (
     <div className="flex flex-col justify-center">
-      <h1 className="text-4xl font-bold mb-6">On-demand security services for your members</h1>
+      <h1 className="mb-6 text-4xl font-bold">
+        On-demand security services for your members
+      </h1>
       <p className="mb-6 text-gray-600">
-        Description of what the experience is like for the end user. 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Description of what the experience is like for the end user. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua.
       </p>
       <div className="flex space-x-4">
         <Button onClick={onPrimaryClick} variant="cta">
@@ -108,31 +112,30 @@ export default function SecurityApp({
         </Button>
         {secondaryButtonText && onSecondaryClick && (
           <div>
-
-          <Button variant="ctaWhite" onClick={onSecondaryClick}>
-            {secondaryButtonText}
-          </Button>
+            <Button variant="ctaWhite" onClick={onSecondaryClick}>
+              {secondaryButtonText}
+            </Button>
           </div>
         )}
       </div>
     </div>
-  )
+  );
 
   return (
-    <div className="w-full h-screen bg-[#F2F5F6]">
-  <div className="w-[90%] mx-auto flex flex-col md:flex-row items-center h-full">
-    {direction ? (
-      <>
-        <div className="w-full md:w-1/2">{imageContent}</div>
-        <div className="w-full md:w-1/2">{textContent}</div>
-      </>
-    ) : (
-      <>
-        <div className="w-full md:w-1/2">{textContent}</div>
-        <div className="w-full md:w-1/2">{imageContent}</div>
-      </>
-    )}
-  </div>
-</div>
-  )
+    <div className="h-screen w-full bg-[#F2F5F6]">
+      <div className="mx-auto flex h-full w-[90%] flex-col items-center md:flex-row">
+        {direction ? (
+          <>
+            <div className="w-full md:w-1/2">{imageContent}</div>
+            <div className="w-full md:w-1/2">{textContent}</div>
+          </>
+        ) : (
+          <>
+            <div className="w-full md:w-1/2">{textContent}</div>
+            <div className="w-full md:w-1/2">{imageContent}</div>
+          </>
+        )}
+      </div>
+    </div>
+  );
 }

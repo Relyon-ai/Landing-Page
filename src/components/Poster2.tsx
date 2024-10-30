@@ -1,25 +1,30 @@
-import Bluepostericon from '@/public/assets/icons/blue-poster-icon'
-import React from 'react'
+import React from 'react';
+
+import Bluepostericon from '@/public/assets/icons/blue-poster-icon';
 
 export default function Poster2() {
   return (
-    <section className="bg-[#1f606c] text-white h-screen flex justify-center items-center">
-      <div className="container mx-auto px-4 py-12 md:py-24 lg:py-32 flex flex-col lg:flex-row justify-between items-center w-[90%]">
+    <section className="flex h-screen items-center justify-center bg-[#1f606c] text-white">
+      <div className="container mx-auto flex w-[90%] flex-col items-center justify-between px-4 py-12 md:py-24 lg:flex-row lg:py-32">
         <div className="lg:w-1/2 ">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
             Making the world a safer place.
           </h1>
           <p className="mb-4">
-            At Relyon... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            At Relyon... Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. U
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. U
           </p>
         </div>
-        <div className="h-[80vh] nr-0 pr-0 ">
-          <Bluepostericon/>
+        <div className="nr-0 h-[80vh] pr-0 ">
+          <Bluepostericon />
         </div>
       </div>
     </section>
-  )
+  );
 }

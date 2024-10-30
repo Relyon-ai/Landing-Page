@@ -1,33 +1,37 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
+
+import ImpactComponent from '@/components/Difference';
+import SecurityServices from '@/components/Pic-description';
 import Poster from '@/components/Poster';
 import ContactForm from '@/components/RequestDemoAndWorkForm';
 import SecurityApp from '@/components/SmartphoneComponent';
-import pic from '../../../../public/assets/images/poster-images/iStock-1338846217 3.png';
 import Testimonials from '@/components/testimonials';
-import SecurityServices from '@/components/Pic-description';
-import ImpactComponent from '@/components/Difference';
+
+import pic from '../../../../public/assets/images/poster-images/iStock-1338846217 3.png';
 
 function Page() {
   const t = useTranslations();
   const valueProps = [
     {
-      title: "Voice activation",
-      description: "Activate emergency services hands-free with our voice recognition technology. Simply say your safe phrase to trigger an immediate response."
+      title: 'Voice activation',
+      description:
+        'Activate emergency services hands-free with our voice recognition technology. Simply say your safe phrase to trigger an immediate response.',
     },
     {
-      title: "Real-time location tracking",
-      description: "Our app provides continuous location updates to emergency contacts and responders, ensuring help arrives exactly where it's needed."
+      title: 'Real-time location tracking',
+      description:
+        "Our app provides continuous location updates to emergency contacts and responders, ensuring help arrives exactly where it's needed.",
     },
     {
-      title: "Instant alerts",
-      description: "Send immediate notifications to your pre-selected emergency contacts with just one tap, keeping your loved ones informed in critical situations."
-    }
-  ]
-  
+      title: 'Instant alerts',
+      description:
+        'Send immediate notifications to your pre-selected emergency contacts with just one tap, keeping your loved ones informed in critical situations.',
+    },
+  ];
 
   return (
-    <div className='flex flex-col items-center'>
+    <div className="flex flex-col items-center">
       <Poster
         isDark
         backgroundImage={pic.src}
@@ -37,14 +41,24 @@ function Page() {
         button1Link="/home"
         button2Text={t('HomePoster.button2Text')}
         button2Link="/home"
-
       />
-      <SecurityServices headline='SECURITY COMPANIES' title='Offer on-demand security services' valueProps={valueProps} isReversed={false} imageSrcs={["aaaa", "bbbb"]} buttonText1='Get Started Now' buttonText2='Book Demo'/>
-      <SecurityApp direction={true} primaryButtonText="Check how to connect" valueProps={valueProps}/>
+      <SecurityServices
+        headline="SECURITY COMPANIES"
+        title="Offer on-demand security services"
+        valueProps={valueProps}
+        isReversed={false}
+        imageSrcs={['aaaa', 'bbbb']}
+        buttonText1="Get Started Now"
+        buttonText2="Book Demo"
+      />
+      <SecurityApp
+        direction
+        primaryButtonText="Check how to connect"
+        valueProps={valueProps}
+      />
       <Testimonials />
       <ImpactComponent />
-      <ContactForm isRequestingADemo={true} />
-      
+      <ContactForm isRequestingADemo />
     </div>
   );
 }
