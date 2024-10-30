@@ -19,7 +19,7 @@ interface PageProps {
 async function loadMessages(locale: string): Promise<Record<string, string>> {
   try {
     // Dynamically import the messages based on the locale
-    const messages = await import(`../../../../messages/${locale}.json`);
+    const messages = await import(`../../../messages/${locale}.json`);
     return messages.default; // Assuming your JSON exports the messages as default
   } catch (error) {
     console.error(`Error loading messages for locale: ${locale}`, error);
