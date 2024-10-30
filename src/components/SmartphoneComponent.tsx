@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Button } from '@/components/ui/button';
 
@@ -82,8 +83,8 @@ export default function SecurityApp({
       <h1 className="mb-6 text-4xl font-bold">Stay safe. Stay connected.</h1>
       {valueProps && (
         <div className="mb-6 space-y-4">
-          {valueProps.map((prop, index) => (
-            <div key={index}>
+          {valueProps.map((prop) => (
+            <div key={uuidv4()}>
               <h3 className="font-semibold">{prop.title}</h3>
               <p className="text-gray-600">{prop.description}</p>
             </div>

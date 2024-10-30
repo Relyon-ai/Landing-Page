@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 import { Button } from './ui/button';
 
@@ -43,12 +44,12 @@ export default function SecurityServices({
       <h1 className="mb-6 text-3xl font-bold">{title}</h1>
       <div className="mb-8 space-y-4">
         {valueProps?.map((prop, index) => (
-          <div key={index}>
+          <div key={uuidv4()}>
             <h3 className="font-semibold">{prop.title}</h3>
             <p className={`text-${textSizeColor[0]} text-${textSizeColor[1]}`}>
               {prop.description}{' '}
               {index === valueProps.length - 1 && clickHere ? (
-                <button className="text-teal-500 underline">
+                <button type="button" className="text-teal-500 underline">
                   {' '}
                   click here{' '}
                 </button>
@@ -71,7 +72,7 @@ export default function SecurityServices({
       <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-lg bg-muted">
         <AnimatePresence initial={false}>
           <motion.img
-            key={currentImageIndex}
+            key={uuidv4()}
             src={
               imageSrcs[currentImageIndex] ||
               `/placeholder.svg?height=400&width=400`
@@ -90,7 +91,8 @@ export default function SecurityServices({
         <div className="mt-4 flex w-full max-w-md justify-center space-x-2">
           {imageSrcs.map((_, index) => (
             <button
-              key={index}
+              key={uuidv4()}
+              type="button"
               className={`size-3 rounded-full ${
                 index === currentImageIndex
                   ? 'bg-primary'

@@ -21,7 +21,7 @@ export default function Poster2() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. U
           </p>
         </div>
-        <div className="nr-0 h-[80vh] pr-0 ">
+        <div className=" h-[80vh] pr-0 ">
           <Bluepostericon />
         </div>
       </div>

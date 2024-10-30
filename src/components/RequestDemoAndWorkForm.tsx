@@ -37,7 +37,7 @@ export default function ContactForm({
         </p>
       </div>
       <div className="flex-1">
-        <form className={`bg- rounded-lg${formColor} p-6`}>
+        <form className={`rounded-lg${formColor} p-6`}>
           <div className="mb-4 grid grid-cols-2 gap-4">
             <Input placeholder="First name *" required className="bg-white " />
             <Input placeholder="Last name" className="bg-white" />

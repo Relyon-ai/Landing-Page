@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 interface PressSectionProps {
   imageUrls?: string[];
@@ -32,7 +33,10 @@ export default function InThePress({
           <div className="flex items-center justify-center gap-6 md:grid-cols-4">
             {imageUrls && imageUrls.length > 0
               ? imageUrls.map((url, index) => (
-                  <div key={index} className="flex items-center justify-center">
+                  <div
+                    key={uuidv4()}
+                    className="flex items-center justify-center"
+                  >
                     <Image
                       src={url}
                       alt={`Press image ${index + 1}`}
@@ -43,9 +47,9 @@ export default function InThePress({
                     />
                   </div>
                 ))
-              : Array.from({ length: logoCount }).map((_, index) => (
+              : Array.from({ length: logoCount }).map((_) => (
                   <div
-                    key={index}
+                    key={uuidv4()}
                     className="flex items-center justify-center bg-gray-200 p-4 "
                     style={{ width: '200px', height: '100px' }}
                   >
