@@ -1,3 +1,4 @@
+import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
@@ -10,7 +11,8 @@ import Testimonials from '@/components/testimonials';
 
 import pic from '../../../../public/assets/images/poster-images/iStock-1338846217 3.png';
 
-function Page() {
+function Page({ params }: { params: { locale: string } }) {
+  unstable_setRequestLocale(params.locale);
   const t = useTranslations();
   const valueProps = [
     {
