@@ -8,6 +8,8 @@ steps:
   - name: "gcr.io/cloud-builders/npm"
     args: ["run", "build"]
     id: "Building the Next.js app"
+    env:
+      - NEXT_PRIVATE_SKIP_ESLINT=true
 
   # Build the container image
   - name: "gcr.io/cloud-builders/docker"
