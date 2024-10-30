@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
+// Import your components
 import ImpactComponent from '@/components/Difference';
 import SecurityServices from '@/components/Pic-description';
 import Poster from '@/components/Poster';
@@ -10,8 +11,29 @@ import Testimonials from '@/components/testimonials';
 
 import pic from '../../../../public/assets/images/poster-images/iStock-1338846217 3.png';
 
-function Page() {
+// Define an interface for the props
+interface PageProps {
+  messages: Record<string, string>; // Define the type for messages
+}
+
+async function loadMessages(locale: string): Promise<Record<string, string>> {
+  try {
+    // Dynamically import the messages based on the locale
+    const messages = await import(`../../../../messages/${locale}.json`);
+    return messages.default; // Assuming your JSON exports the messages as default
+  } catch (error) {
+    console.error(`Error loading messages for locale: ${locale}`, error);
+    return {}; // Return an empty object or handle the error as needed
+  }
+}
+
+// Define the page component
+const Page: React.FC<PageProps> = ({ messages }) => {
   const t = useTranslations();
+
+  // Example of using messages if you have specific keys
+  const someMessage = messages['someMessageKey']; // Replace 'someMessageKey' with an actual key
+
   const valueProps = [
     {
       title: t('VoiceActivation.title'),
@@ -56,20 +78,16 @@ function Page() {
       <Testimonials />
       <ImpactComponent />
       <ContactForm isRequestingADemo />
+      <div>{someMessage}</div>
     </div>
   );
+};
+
+// Default export for the page
+export default async function PageWrapper({ params }: { params: { locale: string } }) {
+  const messages = await loadMessages(params.locale);
+
+  return (
+    <Page messages={messages} /> // Pass messages to the Page component
+  );
 }
-
-// Example of getStaticProps for Next.js
-export async function getStaticProps({ locale }: { locale: string }) {
-  // Load messages based on the locale
-  const messages = await import(`../../../../messages/${locale}.json`);
-
-  return {
-    props: {
-      messages,
-    },
-  };
-}
-
-export default Page;
