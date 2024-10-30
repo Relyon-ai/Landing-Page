@@ -1,7 +1,6 @@
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
-// Import your components
 import ImpactComponent from '@/components/Difference';
 import SecurityServices from '@/components/Pic-description';
 import Poster from '@/components/Poster';
@@ -11,41 +10,23 @@ import Testimonials from '@/components/testimonials';
 
 import pic from '../../../../public/assets/images/poster-images/iStock-1338846217 3.png';
 
-// Define an interface for the props
-interface PageProps {
-  messages: Record<string, string>; // Define the type for messages
-}
-
-async function loadMessages(locale: string): Promise<Record<string, string>> {
-  try {
-    // Dynamically import the messages based on the locale
-    const messages = await import(`../../../messages/${locale}.json`);
-    return messages.default; // Assuming your JSON exports the messages as default
-  } catch (error) {
-    console.error(`Error loading messages for locale: ${locale}`, error);
-    return {}; // Return an empty object or handle the error as needed
-  }
-}
-
-// Define the page component
-const Page: React.FC<PageProps> = ({ messages }) => {
+function Page() {
   const t = useTranslations();
-
-  // Example of using messages if you have specific keys
-  const someMessage = messages['someMessageKey']; // Replace 'someMessageKey' with an actual key
-
   const valueProps = [
     {
-      title: t('VoiceActivation.title'),
-      description: t('VoiceActivation.description'),
+      title: 'Voice activation',
+      description:
+        'Activate emergency services hands-free with our voice recognition technology. Simply say your safe phrase to trigger an immediate response.',
     },
     {
-      title: t('RealTimeTracking.title'),
-      description: t('RealTimeTracking.description'),
+      title: 'Real-time location tracking',
+      description:
+        "Our app provides continuous location updates to emergency contacts and responders, ensuring help arrives exactly where it's needed.",
     },
     {
-      title: t('InstantAlerts.title'),
-      description: t('InstantAlerts.description'),
+      title: 'Instant alerts',
+      description:
+        'Send immediate notifications to your pre-selected emergency contacts with just one tap, keeping your loved ones informed in critical situations.',
     },
   ];
 
@@ -62,32 +43,24 @@ const Page: React.FC<PageProps> = ({ messages }) => {
         button2Link="/home"
       />
       <SecurityServices
-        headline={t('SecurityServices.headline')}
-        title={t('SecurityServices.title')}
+        headline="SECURITY COMPANIES"
+        title="Offer on-demand security services"
         valueProps={valueProps}
         isReversed={false}
         imageSrcs={['aaaa', 'bbbb']}
-        buttonText1={t('SecurityServices.buttonText1')}
-        buttonText2={t('SecurityServices.buttonText2')}
+        buttonText1="Get Started Now"
+        buttonText2="Book Demo"
       />
       <SecurityApp
         direction
-        primaryButtonText={t('SecurityApp.primaryButtonText')}
+        primaryButtonText="Check how to connect"
         valueProps={valueProps}
       />
       <Testimonials />
       <ImpactComponent />
       <ContactForm isRequestingADemo />
-      <div>{someMessage}</div>
     </div>
   );
-};
-
-// Default export for the page
-export default async function PageWrapper({ params }: { params: { locale: string } }) {
-  const messages = await loadMessages(params.locale);
-
-  return (
-    <Page messages={messages} /> // Pass messages to the Page component
-  );
 }
+
+export default Page;
