@@ -51,7 +51,7 @@ function Page() {
           title="How Relyon keeps them safe"
           headline="FROM OUR USERS"
         />
-        <InThePress title="OUR PARTNERS" bgColor="white" />
+        <InThePress title="OUR PARTNERS" bgColor="bg-white" />
         <ContactForm isRequestingADemo={false} formColor="white" />
       </div>
     </div>

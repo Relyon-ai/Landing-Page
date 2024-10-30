@@ -46,7 +46,7 @@ export default function SecurityServices({
         {valueProps?.map((prop, index) => (
           <div key={uuidv4()}>
             <h3 className="font-semibold">{prop.title}</h3>
-            <p className={`text-${textSizeColor[0]} text-${textSizeColor[1]}`}>
+            <p className={`${textSizeColor[0]} ${textSizeColor[1]}`}>
               {prop.description}{' '}
               {index === valueProps.length - 1 && clickHere ? (
                 <button type="button" className="text-teal-500 underline">

@@ -43,7 +43,7 @@ function Page() {
           title="Our Story"
           clickHere
           valueProps={valueProps}
-          textSizeColor={['black', 'xl']}
+          textSizeColor={['text-black', 'text-xl']}
           isGray
         />
       </div>

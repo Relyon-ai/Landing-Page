@@ -17,7 +17,7 @@ export default function InThePress({
 
   return (
     <section
-      className={`w-full ${bgColor ? `bg-${bgColor}` : 'bg-gray-100'}  flex h-[60vh] justify-center`}
+      className={`w-full ${bgColor ? `${bgColor}` : 'bg-gray-100'}  flex h-[60vh] justify-center`}
     >
       <div
         className="container flex items-center justify-center"
