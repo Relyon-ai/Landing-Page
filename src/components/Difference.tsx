@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 
@@ -38,7 +39,7 @@ export default function ImpactComponent({
               </p>
             </div>
 
-            <Button variant="cta" className="w-[50%]">
+            <Button variant="cta" className="w-1/2">
               Join us in making a difference &gt;
             </Button>
           </div>
@@ -62,7 +63,7 @@ export default function ImpactComponent({
             <div className="flex justify-between">
               {[0, 1, 2, 3].map((index) =>
                 imageSources && imageSources[index] ? (
-                  <img
+                  <Image
                     key={index}
                     src={imageSources[index]}
                     alt={`Logo ${index + 1}`}
