@@ -9,7 +9,7 @@ import ContactForm from '@/components/RequestDemoAndWorkForm';
 import SecurityApp from '@/components/SmartphoneComponent';
 import Testimonials from '@/components/testimonials';
 
-import pic from '../../../../public/assets/images/poster-images/iStock-1338846217 3.png';
+import pic from '../../../../public/assets/images/poster-images/Overview section.png';
 
 function Page({ params }: { params: { locale: string } }) {
   unstable_setRequestLocale(params.locale);

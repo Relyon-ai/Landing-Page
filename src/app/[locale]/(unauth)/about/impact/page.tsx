@@ -6,7 +6,7 @@ import Poster from '@/components/Poster';
 import ContactForm from '@/components/RequestDemoAndWorkForm';
 import Testimonials from '@/components/testimonials';
 
-import pic from '../../../../../../public/assets/images/poster-images/99548d550277146275f315069366b104.jpeg';
+import pic from '../../../../../../public/assets/images/poster-images/womanPic.png';
 
 function Page() {
   const valueProps = [
