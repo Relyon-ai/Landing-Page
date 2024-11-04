@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const resourcesLinks: NavLink[] = [
     { label: 'Use Cases', href: '/' },
-    { label: 'Guides / Tutorials', href: '/' },
+    { label: 'Partners', href: '/resources/partners' },
     { label: 'Blog', href: '/' },
     { label: 'Help Center / FAQs', href: '/' },
   ];
