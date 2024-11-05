@@ -1,29 +1,29 @@
-import React from 'react';
+import React from "react";
 
-import InThePress from '@/components/In-The-Press';
-import SecurityServices from '@/components/Pic-description';
-import Poster from '@/components/Poster';
-import ContactForm from '@/components/RequestDemoAndWorkForm';
-import Testimonials from '@/components/testimonials';
+import InThePress from "@/components/In-The-Press";
+import SecurityServices from "@/components/Pic-description";
+import Poster from "@/components/Poster";
+import ContactForm from "@/components/RequestDemoAndWorkForm";
+import Testimonials from "@/components/testimonials";
 
-import pic from '../../../../../../public/assets/images/poster-images/womanPic.png';
+import pic from "../../../../../../public/assets/images/poster-images/womanPic.png";
 
 function Page() {
   const valueProps = [
     {
-      title: '',
+      title: "",
       description:
-        'Our journey began with a hackathon named after Michal Sela, a social worker who was tragically murdered by her husband in front of their infant daughter. Michal experienced an abusive relationship without realizing her life was in danger. Relyon was founded after winning the hackathon established by the Michal Sela Forum, which seeks technological solutions to domestic violence.',
+        "Our journey began with a hackathon named after Michal Sela, a social worker who was tragically murdered by her husband in front of their infant daughter. Michal experienced an abusive relationship without realizing her life was in danger. Relyon was founded after winning the hackathon established by the Michal Sela Forum, which seeks technological solutions to domestic violence.",
     },
     {
-      title: '',
+      title: "",
       description:
-        'Today, Relyon protects hundreds of women in abusive situations, partnering with organizations to provide the most professional services for these women.',
+        "Today, Relyon protects hundreds of women in abusive situations, partnering with organizations to provide the most professional services for these women.",
     },
     {
-      title: '',
+      title: "",
       description:
-        'We offer free licenses annually to nonprofits that meet our criteria. To leave your details and check eligibility, ',
+        "We offer free licenses annually to nonprofits that meet our criteria. To leave your details and check eligibility, ",
     },
   ];
 
@@ -41,16 +41,18 @@ function Page() {
         title="Our Story"
         valueProps={valueProps}
         isReversed={false}
-        imageSrcs={['aaaa']}
-        textSizeColor={['2xl', 'black']}
+        imageSrcs={["aaaa"]}
+        textSizeColor={["2xl", "black"]}
         clickHere
       />
-      <div className="flex flex-col items-center bg-[#F2F5F6]">
-        <Testimonials
-          buttons={false}
-          title="How Relyon keeps them safe"
-          headline="FROM OUR USERS"
-        />
+      <div className="flex flex-col items-center bg-[#F2F5F6] ">
+        <div className="h-screen w-screen">
+          <Testimonials
+            buttons={false}
+            title="How Relyon keeps them safe"
+            headline="FROM OUR USERS"
+          />
+        </div>
         <InThePress title="OUR PARTNERS" bgColor="bg-white" />
         <ContactForm isRequestingADemo={false} formColor="white" />
       </div>

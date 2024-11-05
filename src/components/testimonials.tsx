@@ -27,7 +27,7 @@ export default function Testimonials({
   ];
 
   return (
-    <div className="mx-auto flex h-screen w-[90%] max-w-4xl flex-col justify-center">
+    <div className="mx-auto flex h-full w-[90%] max-w-4xl flex-col justify-center">
       <h2 className="mb-2 text-center text-xl font-bold">{headline || null}</h2>
       <h2 className="mb-8 text-center text-3xl font-bold">
         {title || 'TESTIMONIALS'}

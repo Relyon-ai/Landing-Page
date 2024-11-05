@@ -21,16 +21,27 @@ function Page() {
         button1Link={"/"}
       />
       <div className=" bg-[#f2f5f6]">
-
-
-      <InfoSection description1="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." description2="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." description3="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." phone1Src={phonePic1.src} phone2Src={phonePic2.src} phone3Src={phonePic3.src} title1="Location sharing" title2="Safe Driving" />
+        <InfoSection
+          description1="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          description2="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          description3="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          phone1Src={phonePic1.src}
+          phone2Src={phonePic2.src}
+          phone3Src={phonePic3.src}
+          title1="Location sharing"
+          title2="Safe Driving"
+        />
       </div>
-      <Testimonials
-        buttons={false}
-        title="How Relyon keeps them safe"
-        headline="FROM OUR USERS"
-      />
-      <Testimonials buttons={false} title="Maybe - blog posts" />
+      <div className="h-screen w-screen">
+        <Testimonials
+          buttons={false}
+          title="How Relyon keeps them safe"
+          headline="FROM OUR USERS"
+        />
+      </div>
+      <div className="h-screen w-screen">
+        <Testimonials buttons={false} title="Maybe - blog posts" />
+      </div>
     </>
   );
 }
