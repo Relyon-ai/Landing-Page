@@ -1,7 +1,7 @@
-import React from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Benefit = {
   title: string;
@@ -57,27 +57,29 @@ function BenefitsDisplay({ title, benefits }: BenefitsDisplayProps) {
 }
 function RoundedBenefitsDisplay({ title, benefits }: BenefitsDisplayProps) {
   return (
-    <div className="mx-auto w-full max-w-4xl p-6">
-      <h2 className="mb-6 text-center text-2xl font-bold">{title}</h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {benefits.map((benefit) => (
-          <Card
-            key={uuidv4()}
-            className="rounded-lg border border-gray-200 shadow-sm"
-          >
-            <CardHeader className="flex flex-col items-center space-y-2 p-4">
-              <div className="flex size-16 items-center justify-center text-teal-600">
-                {benefit.icon}
-              </div>
-              <CardTitle className="text-center text-lg font-semibold">
-                {benefit.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="px-4 pb-4 text-center text-sm text-gray-600">
-              <p>{benefit.description}</p>
-            </CardContent>
-          </Card>
-        ))}
+    <div className="mx-auto w-full max-w-4xl p-10 h-screen align-middle flex justify-center items-center">
+      <div>
+        <h2 className="mb-6 text-center text-2xl font-bold">{title}</h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {benefits.map((benefit) => (
+            <Card
+              key={uuidv4()}
+              className="rounded-2xl border border-gray-200 shadow-sm"
+            >
+              <CardHeader className="flex flex-col items-center space-y-2 p-4">
+                <div className="flex size-16 items-center justify-center text-teal-600">
+                  {benefit.icon}
+                </div>
+                <CardTitle className="text-center text-lg font-semibold">
+                  {benefit.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="px-4 pb-4 text-center text-sm text-gray-600">
+                <p>{benefit.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ export default function SecurityServices({
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const ContentSection = () => (
-    <div className={`flex-1 ${isReversed ? 'md:pl-8' : 'md:pr-8'}`}>
+    <div className={`flex-1  ${isReversed ? 'md:pl-8' : 'md:pr-8'}`}>
       <h2 className="mb-2 text-sm font-semibold uppercase">{headline}</h2>
       <h1 className="mb-6 text-3xl font-bold">{title}</h1>
       <div className="mb-8 space-y-4">
@@ -109,7 +109,7 @@ export default function SecurityServices({
 
   return (
     <div
-      className={`flex min-h-screen w-[90%] flex-col items-center md:flex-row ${isGray ? 'bg-[#f2f5f6]' : 'bg-background'} text-foreground ${isReversed ? 'md:flex-row-reverse' : ''}`}
+      className={`flex min-h-screen w-[90%] flex-col items-center justify-center md:flex-row ${isGray ? 'bg-[#f2f5f6]' : 'bg-background'} text-foreground ${isReversed ? 'md:flex-row-reverse' : ''}`}
     >
       <ContentSection />
       <ImageSection />

@@ -46,7 +46,7 @@ function Page() {
         clickHere
       />
       <div className="flex flex-col items-center bg-[#F2F5F6] ">
-        <div className="h-screen w-screen">
+        <div className="h-[80vh] w-screen">
           <Testimonials
             buttons={false}
             title="How Relyon keeps them safe"
@@ -54,7 +54,7 @@ function Page() {
           />
         </div>
         <InThePress title="OUR PARTNERS" bgColor="bg-white" />
-        <ContactForm isRequestingADemo={false} formColor="white" />
+        <ContactForm isRequestingADemo={false} formColor="bg-white" />
       </div>
     </div>
   );
