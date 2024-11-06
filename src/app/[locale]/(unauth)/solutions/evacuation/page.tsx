@@ -50,7 +50,7 @@ function Page() {
         <RoundedBenefitsDisplay title="Benefits " benefits={benefits} />
         <div className="bg-[#f2f5f6] w-screen  ">
           <div className="h-[70vh]">
-            <Testimonials />
+            <Testimonials buttons={false}/>
           </div>
         </div>
         <ContactForm isRequestingADemo={false} formColor="bg-[#F2F5F6]" />

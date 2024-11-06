@@ -1,119 +1,105 @@
-import React from 'react';
+import React from "react";
 
-import { BenefitsDisplay, RoundedBenefitsDisplay } from '@/components/Benefits';
-import Automation from '@/public/assets/icons/benefits-icons/Automation';
-import BoostRevenue from '@/public/assets/icons/benefits-icons/Boost-revenue';
-import BrandValue from '@/public/assets/icons/benefits-icons/Brand-value';
-import Comunication from '@/public/assets/icons/benefits-icons/Comunication';
-import CustomerEngagement from '@/public/assets/icons/benefits-icons/Customer-engagement';
-import Emergency from '@/public/assets/icons/benefits-icons/Emergency';
-import ExpandRevenue from '@/public/assets/icons/benefits-icons/Expand-revenue';
-import Flexibillity from '@/public/assets/icons/benefits-icons/Flexibillity';
-import Integration from '@/public/assets/icons/benefits-icons/Integration';
-import Sales from '@/public/assets/icons/benefits-icons/Sales';
-import SituationalAwareness from '@/public/assets/icons/benefits-icons/Situational-awareness';
-import Support from '@/public/assets/icons/benefits-icons/Support';
+import { BenefitsDisplay } from "@/components/Benefits";
+import Automation from "@/public/assets/icons/benefits-icons/Automation";
+import BoostRevenue from "@/public/assets/icons/benefits-icons/Boost-revenue";
+import CustomerEngagement from "@/public/assets/icons/benefits-icons/Customer-engagement";
+import Integration from "@/public/assets/icons/benefits-icons/Integration";
+import Support from "@/public/assets/icons/benefits-icons/Support";
+import Poster from "@/components/Poster";
+import pic from "../../../../../../public/assets/images/poster-images/Overview section (1).png";
+import InfoSection from "@/components/ThreePhones";
+import ContactForm from "@/components/RequestDemoAndWorkForm";
+import Testimonials from "@/components/testimonials";
+import SecurityApp from "@/components/SmartphoneComponent";
 
 function Page() {
   const benefitsWorkingEithRelyon = [
     {
-      title: 'Boost Revenue',
+      title: "Boost Revenue",
       description:
-        'Attract and retain customers and unlock new revenue streams with Relyon.',
+        "Attract and retain customers and unlock new revenue streams with Relyon.",
       icon: <BoostRevenue />,
     },
     {
-      title: 'Elevate Customer Engagement',
+      title: "Elevate Customer Engagement",
       description:
-        'Keep your clients informed and engaged with real-time alerts and monitoring.',
+        "Keep your clients informed and engaged with real-time alerts and monitoring.",
       icon: <CustomerEngagement />,
     },
     {
-      title: 'Reduce Costs with Automation',
+      title: "Reduce Costs with Automation",
       description:
-        'Automate routine tasks and allow your team to focus on critical activities.',
+        "Automate routine tasks and allow your team to focus on critical activities.",
       icon: <Automation />,
     },
     {
-      title: 'Instant Support and Assistance',
+      title: "Instant Support and Assistance",
       description:
-        'Ensure immediate assistance with SOS alerts, video calls and chat features.',
+        "Ensure immediate assistance with SOS alerts, video calls and chat features.",
       icon: <Support />,
     },
     {
-      title: 'Scalable and Seamless Integration',
+      title: "Scalable and Seamless Integration",
       description:
         "Easily integrate Relyon's solutions with your existing systems.",
       icon: <Integration />,
     },
   ];
-  const benefits = [
+  const valueProps = [
     {
-      title: 'Real-Time Situational Awareness',
+      title: "",
       description:
-        'Providing rescue teams with a comprehensive overview of the situation, allowing for informed decision-making and efficient resource allocation.',
-      icon: <SituationalAwareness />,
-    },
-    {
-      title: 'Emergency Preparedness',
-      description:
-        'We empower communities to use our technology to be prepared for mass emergencies while improving overall safety and preparedness.',
-      icon: <Comunication />,
-    },
-    {
-      title: 'Two-Way Communication',
-      description:
-        'Enable direct communication with individuals trapped under debris, improving coordination and increasing the chances of successful rescues.',
-      icon: <Emergency />,
-    },
-    {
-      title: 'Scalability and Flexibility',
-      description:
-        'Our solutions are designed to integrate seamlessly with existing systems, making it easy to scale and adapt to various emergency scenarios.',
-      icon: <Flexibillity />,
-    },
-  ];
-  const partnerBenefits = [
-    {
-      title: 'Expand Revenue Streams',
-      description:
-        'Offer cutting-edge, AI-driven safety solutions to your clients. Attract and retain customers, and open new revenue opportunities.',
-      icon: <ExpandRevenue />,
-    },
-    {
-      title: 'Strengthened Brand Value',
-      description:
-        'Elevate your brand’s reputation as a provider of state-of-the-art security technology, offering reliable and effective safety solutions.',
-      icon: <BrandValue />,
-    },
-    {
-      title: 'Extensive Support and Training',
-      description:
-        'We provide comprehensive support and training, from onboarding to ongoing assistance, so you can effectively market and sell our products. ',
-      icon: <Support />,
-    },
-    {
-      title: 'Marketing and Sales Resources',
-      description:
-        'Our co-marketing initiatives and ready-to-use materials ensure you can reach your target audience and drive sales with confidence.',
-      icon: <Sales />,
+        "Description of what the experience is like for the end user. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
   ];
 
   return (
     <>
-      <BenefitsDisplay
-        title="Benefits of working with Relyon"
-        benefits={benefitsWorkingEithRelyon}
-      />
-      <RoundedBenefitsDisplay
-        title="Benefits of working with Relyon"
-        benefits={benefits}
-      />
-      <RoundedBenefitsDisplay
-        title="Partner benefits"
-        benefits={partnerBenefits}
-      />
+      <div className="flex flex-col items-center ">
+        <Poster
+          backgroundImage={pic.src}
+          title={"Enhance safety while \ndriving business growth"}
+          description="As a leader in the security industry, you recognize the need for cutting-edge solutions. Partnering with Relyon offers a range of strategic advantages designed to elevate your services and operational efficiency."
+          headline="SECURITY COMPANIES"
+          button1Link={"/"}
+          button1Text="Get started now > "
+          button2Link={"/"}
+          button2Text="Request demo > "
+          isDark
+        />
+
+        <InfoSection
+          description1="Strengthen client relationships with real-time monitoring, alerts, and two-way communication. Keep your clients informed and engaged with proactive safety measures that build trust and satisfaction."
+          description2="Utilize AI-powered predictive analytics to make informed decisions about task force deployment. Our platform analyzes real-time data and trends, ensuring your resources are utilized where they are needed most."
+          description3="Streamline your operations with advanced artificial intelligence. Relyon’s predictive analytics, urgency scoring, and automated task allocation ensure your resources are deployed efficiently and effectively."
+          phone1Src={"aaa"}
+          phone2Src={"bbb"}
+          phone3Src={"ccc"}
+          title1="Real Time Alert Management"
+          title2="Data-Driven Decision Making"
+          title3="Optimize Operations with AI"
+        />
+
+        <BenefitsDisplay
+          title="Benefits of working with Relyon"
+          benefits={benefitsWorkingEithRelyon}
+        />
+
+        <SecurityApp
+          direction={false}
+          primaryButtonText={"Get Started"}
+          secondaryButtonText={"Request Demo"}
+          valueProps={valueProps}
+          title={"On-demand security \nservices for your members"}
+          isGray={false}
+        />
+
+        <div className="bg-[#f2f5f6] w-full h-[60vh]">
+          <Testimonials buttons={false}/>
+        </div>
+        <ContactForm isRequestingADemo formColor="bg-[#f2f5f6]" />
+      </div>
     </>
   );
 }

@@ -1,6 +1,7 @@
 interface InfoSectionProps {
   title1: string;
   title2: string;
+  title3?: string;
   description1: string;
   description2: string;
   description3: string;
@@ -12,6 +13,7 @@ interface InfoSectionProps {
 const InfoSection: React.FC<InfoSectionProps> = ({ 
   title1, 
   title2, 
+  title3,
   description1, 
   description2, 
   description3,
@@ -20,10 +22,13 @@ const InfoSection: React.FC<InfoSectionProps> = ({
   phone3Src
 }) => {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
+    <div className="max-w-5xl w-[90%] mx-auto px-4 py-12">
       <div className="mb-20">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
+          <h2 className="text-3xl font-bold mb-4">
+              {title1}
+            </h2>
             <p className=" text-xl leading-relaxed">
               {description1}
             </p>
@@ -49,7 +54,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({
           </div>
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl font-bold mb-4">
-              {title1}
+              {title2}
             </h2>
             <p className="text-xl leading-relaxed">
               {description2}
@@ -62,7 +67,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl font-bold mb-4">
-              {title2}
+              {title3}
             </h2>
             <p className="text-xl leading-relaxed">
               {description3}
