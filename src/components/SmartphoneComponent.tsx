@@ -17,6 +17,8 @@ interface SecurityAppProps {
   valueProps?: ValueProp[];
   primaryButtonText: string;
   secondaryButtonText?: string;
+  title?: string; 
+  isGray? : boolean;
   onPrimaryClick?: () => void;
   onSecondaryClick?: () => void;
 }
@@ -26,6 +28,8 @@ export default function SecurityApp({
   valueProps,
   primaryButtonText,
   secondaryButtonText,
+  title,
+  isGray,
   onPrimaryClick,
   onSecondaryClick,
 }: SecurityAppProps) {
@@ -100,7 +104,7 @@ export default function SecurityApp({
   ) : (
     <div className="flex flex-col justify-center">
       <h1 className="mb-6 text-4xl font-bold">
-        On-demand security services for your members
+        {title ? title : "On-demand security services for your members"}
       </h1>
       <p className="mb-6 text-gray-600">
         Description of what the experience is like for the end user. Lorem ipsum
@@ -123,7 +127,7 @@ export default function SecurityApp({
   );
 
   return (
-    <div className="h-screen w-full bg-[#F2F5F6]">
+    <div className={`h-screen [w-90%] ${isGray ? "bg-[#F2F5F6]" : "bg-white"} `}>
       <div className="mx-auto flex h-full w-[90%] flex-col items-center md:flex-row">
         {direction ? (
           <>

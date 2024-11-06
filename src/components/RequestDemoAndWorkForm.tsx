@@ -36,9 +36,9 @@ export default function ContactForm({
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}
         </p>
       </div>
-      <div className="flex-1">
-        <form className={`rounded-lg${formColor} p-6`}>
-          <div className="mb-4 grid grid-cols-2 gap-4">
+      <div className={`flex-1 ${formColor} rounded-2xl`}>
+        <form className={`rounded-lg p-6`}>
+          <div className={`mb-4 grid grid-cols-2 gap-4 `}>
             <Input placeholder="First name *" required className="bg-white " />
             <Input placeholder="Last name" className="bg-white" />
             <Input
