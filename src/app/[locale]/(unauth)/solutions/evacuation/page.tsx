@@ -53,7 +53,7 @@ function Page() {
             <Testimonials />
           </div>
         </div>
-        <ContactForm isRequestingADemo={false} />
+        <ContactForm isRequestingADemo={false} formColor="bg-[#F2F5F6]" />
       </div>
     </>
   );
