@@ -85,8 +85,7 @@ function Page() {
         valueProps={valueProps}
         title={"On-demand security \nservices for your members"}
         isGray={false}
-
-      />
+        />
         <div className="h-70vh w-screen bg-[#f2f5f6] py-[6%]">
           <Testimonials />
         </div>

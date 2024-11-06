@@ -115,9 +115,9 @@ export default function SecurityApp({
         <Button onClick={onPrimaryClick} variant="cta">
           {primaryButtonText}
         </Button>
-        {secondaryButtonText && onSecondaryClick && (
+        {secondaryButtonText && (
           <div>
-            <Button variant="ctaWhite" onClick={onSecondaryClick}>
+            <Button variant="ctaWhiteBlue" onClick={onSecondaryClick}>
               {secondaryButtonText}
             </Button>
           </div>
