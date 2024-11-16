@@ -28,7 +28,7 @@ const Section = (props: {
       </div>
     )}
 
-    <div className="mx-auto px-12">{props.children}</div>
+    <div className="mx-auto lg:px-12">{props.children}</div>
   </div>
 );
 

@@ -35,7 +35,7 @@ export default function SecurityApp({
 }: SecurityAppProps) {
   const imageContent = (
     <div className="relative w-full md:h-[500px]">
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="lg:absolute inset-0 flex items-center justify-center">
         {direction ? (
           <>
             <div className="relative z-0 -mr-16 mt-8 h-[360px] w-[180px] md:h-[450px] md:w-[225px]">
@@ -127,17 +127,17 @@ export default function SecurityApp({
   );
 
   return (
-    <div className={`h-screen [w-90%] ${isGray ? "bg-[#F2F5F6]" : "bg-white"} `}>
-      <div className="mx-auto flex h-full w-[90%] flex-col items-center md:flex-row">
+    <div className={`h-screen ${isGray ? "bg-[#F2F5F6]" : "bg-white"} `}>
+      <div className="mx-auto flex h-full w-[90%] flex-col items-center lg:flex-row gap-y-[6%] lg:gap-y-0 lg:gap-x-[20%]">
         {direction ? (
           <>
-            <div className="w-full md:w-1/2">{imageContent}</div>
-            <div className="w-full md:w-1/2">{textContent}</div>
+            <div className="w-full lg:w-1/2">{imageContent}</div>
+            <div className="w-full lg:w-1/2">{textContent}</div>
           </>
         ) : (
           <>
-            <div className="w-full md:w-1/2">{textContent}</div>
-            <div className="w-full md:w-1/2">{imageContent}</div>
+            <div className="w-full lg:w-1/2">{textContent}</div>
+            <div className="w-full lg:w-1/2">{imageContent}</div>
           </>
         )}
       </div>

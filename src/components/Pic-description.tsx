@@ -58,7 +58,7 @@ export default function SecurityServices({
           </div>
         ))}
       </div>
-      <div className="space-x-4">
+      <div className="flex justify-center space-x-4 md:block">
         {buttonText1 && <Button variant="cta">{buttonText1}</Button>}
         {buttonText2 && <Button variant="ctaWhiteBlue">{buttonText2}</Button>}
       </div>
@@ -108,11 +108,16 @@ export default function SecurityServices({
   );
 
   return (
+    
     <div
-      className={`flex min-h-screen w-[90%] flex-col items-center justify-center md:flex-row ${isGray ? 'bg-[#f2f5f6]' : 'bg-background'} text-foreground ${isReversed ? 'md:flex-row-reverse' : ''}`}
+      className={`flex min-h-screen w-[90%] py-4 md:py-0 flex-col-reverse items-center justify-center md:flex-row ${isGray ? 'bg-[#f2f5f6]' : 'bg-background'} text-foreground ${isReversed ? 'flex-col-reverse md:flex-row-reverse' : ''}`}
     >
       <ContentSection />
       <ImageSection />
-    </div>
+    </div> 
+
+
+
+
   );
 }

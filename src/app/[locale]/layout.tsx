@@ -56,9 +56,9 @@ export default function RootLayout(props: {
           <Navbar />
           {props.children}
           <Footer />
-          <DemoBadge />
+          {/* <DemoBadge />
 
-          <DemoBadge />
+          <DemoBadge /> */}
         </NextIntlClientProvider>
       </body>
     </html>

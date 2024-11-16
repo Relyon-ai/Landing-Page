@@ -22,11 +22,11 @@ const NavDropdownMenu = ({ label, links }: DropdownMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-      <DropdownMenuTrigger className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium hover:border-black">
+    <DropdownMenu open={isOpen} onOpenChange={setIsOpen} >
+      <DropdownMenuTrigger className="items-center border-b-2 border-transparent px-1 pt-1 font-medium hover:border-black hidden md:inline-flex">
         {label} <ChevronDown className="ml-1 size-4 " />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="rounded-xl p-0 ">
+      <DropdownMenuContent className="rounded-xl p-0 hidden md:block">
         {links.map((link) => (
           <DropdownMenuItem
             key={link.href}

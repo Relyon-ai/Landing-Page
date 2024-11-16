@@ -6,7 +6,7 @@ import { WhiteLogo } from '@/public/assets/logo/logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1F606C] py-8  text-white">
+    <footer className="bg-[#1F606C] py-8  text-white w-screen">
       <div className=" mx-auto flex items-center justify-between px-16">
         <div className="shrink-0">
           <WhiteLogo />

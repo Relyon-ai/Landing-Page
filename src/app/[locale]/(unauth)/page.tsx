@@ -49,7 +49,7 @@ function Page({ params }: { params: { locale: string } }) {
         title="Offer on-demand security services"
         valueProps={valueProps}
         isReversed={false}
-        imageSrcs={["aaaa", "bbbb"]}
+        imageSrcs={["/", "/"]}
         buttonText1="Get Started Now"
         buttonText2="Book Demo"
       />

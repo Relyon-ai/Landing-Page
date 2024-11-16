@@ -17,6 +17,7 @@ interface PosterProps {
   isPushed?: boolean;
 }
 
+
 export default function Poster({
   isDark,
   backgroundImage,
@@ -29,10 +30,10 @@ export default function Poster({
   button2Link,
   isPushed = false,
 }: PosterProps) {
+  
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative h-screen w-screen ">
       {isPushed ? <div className="flex">
-          {/* <div className="w-1/2 bg-white z-50 h-screen" />  */}
           <Image
             src={backgroundImage}
             alt="Background"
@@ -54,16 +55,16 @@ export default function Poster({
         className={`absolute inset-0 bg-gradient-to-r ${isDark ? "from-black" : "from-white"} z-10 to-transparent`}
       />
       <div
-        className={`relative z-20 mt-24 flex h-full flex-col justify-center px-[6%] ${isDark ? "text-white" : "text-black"}`}
+        className={`relative z-10 mt-[20vh] md:mt-24 flex h-full flex-col justify-center px-[6%] ${isDark ? "text-white" : "text-black"}`}
       >
-        <p className="mb-8 max-w-2xl text-xl z-50">{headline}</p>
-        <h2 className="mb-10 pr-96 text-7xl font-bold z-50 whitespace-pre-line">{title}</h2>
-        <p className="mb-8 max-w-2xl text-xl z-50">{description}</p>
-        <div className="mb-16 flex space-x-4">
+        <p className="mb-8 max-w-2xl text-xl z-20">{headline}</p>
+        <h2 className="mb-6 md:mb-10 text-4xl md:text-7xl font-bold z-20 whitespace-pre-line">{title}</h2>
+        <p className="mb-6 md:mb-8 max-w-2xl text-lg md:text-xl z-20">{description}</p>
+        <div className="mb-4 md:mb-16 flex flex-col md:flex-row md:space-x-4 space-y-6 md:space-y-0">
           {button1Link && button1Text && (
             <Button
               variant={`${isDark ? "ctaWhite" : "cta"}`}
-              className="p-8"
+              className="p-8 w-full md:w-auto"
               asChild
             >
               <Link href={button1Link} className="text-xl">
@@ -75,7 +76,7 @@ export default function Poster({
           {button2Link && button2Text && (
             <Button
               variant={`${isDark ? "ctaWhite" : "cta"}`}
-              className="p-8"
+              className="p-8 w-full md:w-auto"
               asChild
             >
               <Link href={button2Link} className="text-xl">
