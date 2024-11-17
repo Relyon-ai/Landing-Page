@@ -110,7 +110,7 @@ export default function SecurityServices({
   return (
     
     <div
-      className={`flex min-h-screen w-[90%] py-4 md:py-0 flex-col-reverse items-center justify-center md:flex-row ${isGray ? 'bg-[#f2f5f6]' : 'bg-background'} text-foreground ${isReversed ? 'flex-col-reverse md:flex-row-reverse' : ''}`}
+      className={`flex my-[10%] lg:my-0 lg:min-h-screen w-[90%] py-4 md:py-0 flex-col-reverse items-center justify-center md:flex-row ${isGray ? 'bg-[#f2f5f6]' : 'bg-background'} text-foreground ${isReversed ? 'flex-col-reverse md:flex-row-reverse' : ''}`}
     >
       <ContentSection />
       <ImageSection />

@@ -57,8 +57,9 @@ function Page({ params }: { params: { locale: string } }) {
         direction
         primaryButtonText="Check how to connect"
         valueProps={valueProps}
+        isGray
       />
-      <div className="h-screen w-screen">
+      <div className="lg:h-screen w-screen my-[10%] lg:my-0">
         <Testimonials />
       </div>
       <ImpactComponent />

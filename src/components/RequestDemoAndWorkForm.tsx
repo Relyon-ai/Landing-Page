@@ -28,7 +28,7 @@ export default function ContactForm({
   const buttonText = isRequestingADemo ? 'Request a demo' : 'Submit';
 
   return (
-    <div className="flex h-screen w-[74%] flex-col items-center justify-center md:flex-row">
+    <div className="flex lg:h-screen w-[74%] flex-col items-center justify-center md:flex-row">
       <div className="mx-6 flex-1 py-14">
         <h2 className="mb-4 text-3xl font-bold">{title || formTitle}</h2>
         <p className="text-gray-600">

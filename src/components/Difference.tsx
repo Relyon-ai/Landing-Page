@@ -11,7 +11,7 @@ export default function ImpactComponent({
   imageSources,
 }: ImpactComponentProps = {}) {
   return (
-    <div className="flex min-h-screen w-full items-center bg-[#F2F5F6] p-8">
+    <div className="flex lg:min-h-screen w-full items-center bg-[#F2F5F6] p-8">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-2 text-sm font-semibold text-gray-500">
           MAKING AN IMPACT
