@@ -8,6 +8,7 @@ import Integration from "@/public/assets/icons/benefits-icons/Integration";
 import Support from "@/public/assets/icons/benefits-icons/Support";
 import Poster from "@/components/Poster";
 import pic from "../../../../../../public/assets/images/poster-images/Overview section (1).png";
+import pic2 from "../../../../../../public/assets/images/poster-images/Group 8756.png";
 import InfoSection from "@/components/ThreePhones";
 import ContactForm from "@/components/RequestDemoAndWorkForm";
 import Testimonials from "@/components/testimonials";
@@ -59,6 +60,7 @@ function Page() {
       <div className="flex flex-col items-center ">
         <Poster
           backgroundImage={pic.src}
+          backgroundImage2={pic2.src}
           title={"Enhance safety while \ndriving business growth"}
           description="As a leader in the security industry, you recognize the need for cutting-edge solutions. Partnering with Relyon offers a range of strategic advantages designed to elevate your services and operational efficiency."
           headline="SECURITY COMPANIES"
@@ -95,7 +97,7 @@ function Page() {
           isGray={false}
         />
 
-        <div className="bg-[#f2f5f6] w-full h-[60vh]">
+        <div className="bg-[#f2f5f6] w-full lg:h-[60vh] my-[10%] lg:my-0">
           <Testimonials buttons={false}/>
         </div>
         <ContactForm isRequestingADemo formColor="bg-[#f2f5f6]" />

@@ -1,12 +1,16 @@
+"use client"
+
 import type { Url } from "next/dist/shared/lib/router/router";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 interface PosterProps {
   isDark: boolean;
   backgroundImage: string;
+  backgroundImage2?: string;
   headline?: string;
   title: string;
   description: string;
@@ -21,6 +25,7 @@ interface PosterProps {
 export default function Poster({
   isDark,
   backgroundImage,
+  backgroundImage2 = "",
   headline,
   title,
   description,
@@ -30,20 +35,34 @@ export default function Poster({
   button2Link,
   isPushed = false,
 }: PosterProps) {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); 
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   
   return (
     <div className="relative h-screen w-screen ">
       {isPushed ? <div className="flex">
           <Image
-            src={backgroundImage}
+            src={isMobile && backgroundImage2 != "" ? backgroundImage2 : backgroundImage}
             alt="Background"
             layout="fill"
-            className=" object-contain h-full object-right" //contain
+            className=" object-contain h-full object-right" 
           />
         </div> : (
         
           <Image
-            src={backgroundImage}
+            src={isMobile && backgroundImage2 != "" ? backgroundImage2 : backgroundImage}
             alt="Background"
             layout="fill"
             className="  h-full" 
@@ -55,16 +74,16 @@ export default function Poster({
         className={`absolute inset-0 bg-gradient-to-r ${isDark ? "from-black" : "from-white"} z-10 to-transparent`}
       />
       <div
-        className={`relative z-10 mt-[20vh] md:mt-24 flex h-full flex-col justify-center px-[6%] ${isDark ? "text-white" : "text-black"}`}
+        className={`relative z-10 mt-[20vh] lg:mt-24 flex h-full flex-col justify-center px-[6%] ${isDark ? "text-white" : "text-black"}`}
       >
         <p className="mb-8 max-w-2xl text-xl z-20">{headline}</p>
-        <h2 className="mb-6 md:mb-10 text-4xl md:text-7xl font-bold z-20 whitespace-pre-line">{title}</h2>
-        <p className="mb-6 md:mb-8 max-w-2xl text-lg md:text-xl z-20">{description}</p>
-        <div className="mb-4 md:mb-16 flex flex-col md:flex-row md:space-x-4 space-y-6 md:space-y-0">
+        <h2 className="mb-6 lg:mb-10 text-4xl lg:text-7xl font-bold z-20 whitespace-pre-line">{title}</h2>
+        <p className="mb-6 lg:mb-8 max-w-2xl text-lg lg:text-xl z-20">{description}</p>
+        <div className="mb-4 lg:mb-16 flex flex-col lg:flex-row lg:space-x-4 space-y-6 lg:space-y-0">
           {button1Link && button1Text && (
             <Button
               variant={`${isDark ? "ctaWhite" : "cta"}`}
-              className="p-8 w-full md:w-auto"
+              className="p-8 w-full lg:w-auto"
               asChild
             >
               <Link href={button1Link} className="text-xl">
@@ -76,7 +95,7 @@ export default function Poster({
           {button2Link && button2Text && (
             <Button
               variant={`${isDark ? "ctaWhite" : "cta"}`}
-              className="p-8 w-full md:w-auto"
+              className="p-8 w-full lg:w-auto"
               asChild
             >
               <Link href={button2Link} className="text-xl">

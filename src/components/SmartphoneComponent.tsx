@@ -127,7 +127,7 @@ export default function SecurityApp({
   );
 
   return (
-    <div className={`my-[10%] lg:my-0 py-[10%] lg:py-0 lg:h-screen ${isGray ? "bg-[#F2F5F6]" : "bg-white"} `}>
+    <div className={`my-[10%] lg:my-0 py-[10%] lg:py-0 lg:h-screen w-full ${isGray ? "bg-[#F2F5F6]" : "bg-white"} `}>
       <div className="mx-auto flex h-full w-[90%] flex-col items-center lg:flex-row gap-y-[6%] lg:gap-y-0 lg:gap-x-[20%]">
         {direction ? (
           <>

@@ -1,6 +1,7 @@
 import Poster from "@/components/Poster";
 import React from "react";
 import pic from "../../../../../public/assets/images/poster-images/Overview section (5).png";
+import pic2 from "../../../../../public/assets/images/poster-images/Group 8757.png";
 import Testimonials from "@/components/testimonials";
 import phonePic1 from "../../../../../public/assets/images/phone-images/iPhone 15.png";
 import phonePic2 from "../../../../../public/assets/images/phone-images/iPhone 17 (1).png";
@@ -9,17 +10,21 @@ import InfoSection from "@/components/ThreePhones";
 function Page() {
   return (
     <>
+    <div className="flex flex-col items-center">
+
       <Poster
         backgroundImage={pic.src}
+        backgroundImage2={pic2.src}
         description="Explanation about the company / product
           i.e. we connect families so you always know where your loved ones are"
         isDark={false}
         title={"Stay safe.\nStay connected."}
-        isPushed={true}
+        // isPushed={true}
         headline="INDIVIDUALS"
         button1Text=" Check how to connect >"
         button1Link={"/"}
       />
+    </div>
       <div className=" bg-[#f2f5f6]">
         <InfoSection
           description1="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

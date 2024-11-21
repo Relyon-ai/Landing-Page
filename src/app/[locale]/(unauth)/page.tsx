@@ -10,6 +10,7 @@ import SecurityApp from "@/components/SmartphoneComponent";
 import Testimonials from "@/components/testimonials";
 
 import pic from "../../../../public/assets/images/poster-images/Overview section.png";
+import pic2 from "../../../../public/assets/images/poster-images/Group 8761.png";
 
 function Page({ params }: { params: { locale: string } }) {
   unstable_setRequestLocale(params.locale);
@@ -31,12 +32,14 @@ function Page({ params }: { params: { locale: string } }) {
         "Send immediate notifications to your pre-selected emergency contacts with just one tap, keeping your loved ones informed in critical situations.",
     },
   ];
+  
 
   return (
     <div className="flex flex-col items-center">
       <Poster
         isDark
         backgroundImage={pic.src}
+        backgroundImage2={pic2.src}
         title={t("HomePoster.title")}
         description={t("HomePoster.description")}
         button1Text={t("HomePoster.button1Text")}
@@ -63,7 +66,7 @@ function Page({ params }: { params: { locale: string } }) {
         <Testimonials />
       </div>
       <ImpactComponent />
-      <ContactForm isRequestingADemo />
+      <ContactForm isRequestingADemo formColor="gray-100"/>
     </div>
   );
 }

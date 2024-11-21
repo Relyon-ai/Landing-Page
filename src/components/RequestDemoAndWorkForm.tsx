@@ -22,7 +22,7 @@ export default function ContactForm({
   isRequestingADemo,
   title,
   description,
-  formColor = 'gray-100',
+  formColor = "gray-100",
 }: ContactFormProps) {
   const formTitle = isRequestingADemo ? 'Request a demo' : 'Work with us';
   const buttonText = isRequestingADemo ? 'Request a demo' : 'Submit';
